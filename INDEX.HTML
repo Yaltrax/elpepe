@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veterinaria</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        nav {
+            background: #4CAF50;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .contenido {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .servicios {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .servicio {
+            border: 1px solid #ddd;
+            padding: 10px;
+            width: 200px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        input, textarea {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+
+        button {
+            background: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#inicio" onclick="mostrarSeccion('inicio')">Inicio</a>
+        <a href="#servicios" onclick="mostrarSeccion('servicios')">Servicios</a>
+        <a href="#contacto" onclick="mostrarSeccion('contacto')">Contacto</a>
+    </nav>
+
+    <div id="inicio" class="contenido">
+        <h1>Veterinaria El Amigo Fiel</h1>
+        <img src="descarga.jpg" alt="Veterinaria">
+        <p>Cuidamos de tus mascotas con amor y profesionalismo.</p>
+        <p>Horario: Lunes a Sábado de 9:00 a 18:00</p>
+    </div>
+
+    <div id="servicios" class="contenido" style="display: none;">
+        <h1>Servicios</h1>
+        <div class="servicios">
+            <div class="servicio">
+                <h3>Consulta General</h3>
+                <p>Revisión completa de tu mascota</p>
+            </div>
+            <div class="servicio">
+                <h3>Vacunas</h3>
+                <p>Programa completo de vacunación</p>
+            </div>
+            <div class="servicio">
+                <h3>Urgencias</h3>
+                <p>Atención de emergencias</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="contacto" class="contenido" style="display: none;">
+        <h1>Contacto</h1>
+        <form onsubmit="enviarFormulario(event)">
+            <label>Nombre:</label>
+            <input type="text" required>
+            
+            <label>Email:</label>
+            <input type="email" required>
+            
+            <label>Mensaje:</label>
+            <textarea rows="4" required></textarea>
+            
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>Veterinaria El Amigo Fiel | Tel: 555-0123</p>
+    </footer>
+
+    <script src="SCRIPT.JS">
+    </script>
+</body>
+</html>
